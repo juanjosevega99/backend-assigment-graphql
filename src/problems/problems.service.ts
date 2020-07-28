@@ -38,7 +38,20 @@ export class ProblemsService {
 
   async solveProblem(problemID: string): Promise<Problem> {
     const problemSolved = await this.problemModel.findOneAndUpdate({ _id: problemID }, { $set: { solved: true } })
+
+    //availability agent
+    const freeAgent = await this.agentModel.findOneAndUpdate({ _id: problemSolved.agentId }, { $set: { availability: true } })
+    await this.agentLessProblem(freeAgent)
+
     return problemSolved
+  }
+
+  async agentLessProblem(agent: object): Promise<Problem> {
+    const problemAssigned = await this.problemModel.findOneAndUpdate({ solved: false, agentId: null }, { $set: { agentId: agent } })
+    if (problemAssigned) {
+      await this.availabilityAgent(agent)
+      return problemAssigned
+    }
   }
 
 }
