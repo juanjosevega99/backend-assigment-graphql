@@ -5,6 +5,6 @@ export const AgentSchema = new Schema({
   availability: { 
     type: Boolean, 
     required: true, 
-    default: false
+    default: true
   }
 })
