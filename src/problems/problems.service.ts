@@ -19,6 +19,12 @@ export class ProblemsService {
     const problem = new this.problemModel(createProblemDTO)
     await problem.save
 
+    // assign agent to Problem
+    const freeAgent = await this.agentModel.findOneAndUpdate({ availability: true }, { $set: { availability: false } })
+    if (freeAgent) {
+      await this.agentToProblem(problem._id, freeAgent.id)
+    }
+
     return problem
   }
 
