@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Res, HttpStatus } from '@nestjs/common';
+import { Controller, Post, Body, Res, HttpStatus, NotFoundException } from '@nestjs/common';
 
 import { CreateUserDTO } from './dto/create-user.dto'
 import { UsersService } from './users.service'
@@ -11,6 +11,7 @@ export class UsersController {
   @Post('/create')
   async createUser(@Res() res, @Body() createUserDTO: CreateUserDTO) {
     const user = await this.usersService.createUser(createUserDTO)
+    if (!user) throw new NotFoundException('Error creating User')
     return res.status(HttpStatus.CREATED).json({
       message: 'User Successfully Created',
       user
