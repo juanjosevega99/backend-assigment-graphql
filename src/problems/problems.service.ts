@@ -10,6 +10,16 @@ import { Agent } from 'src/agents/interfaces/agent.interface';
 @Injectable()
 export class ProblemsService {
 
-  
+  constructor(
+    @InjectModel('Problem') private problemModel: Model<Problem>,
+    @InjectModel('Agent') private agentModel: Model<Agent>,
+  ) {}
+
+  async createProblem(createProblemDTO: CreateProblemDTO): Promise<Problem> {
+    const problem = new this.problemModel(createProblemDTO)
+    await problem.save
+
+    return problem
+  }
 
 }
