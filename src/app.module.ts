@@ -11,7 +11,7 @@ import { MongooseModule } from '@nestjs/mongoose'
     AgentsModule, 
     UsersModule, 
     ProblemsModule,
-    MongooseModule.forRoot('mongodb+srv://db_user_platzivideos:rompiendola.desde.l9l9@cluster0-f0pdk.mongodb.net/alexa?retryWrites=true&w=majority', {
+    MongooseModule.forRoot('mongodb+srv://db_user_platzivideos:rompiendola.desde.l9l9@cluster0-f0pdk.mongodb.net/docred?retryWrites=true&w=majority', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false
