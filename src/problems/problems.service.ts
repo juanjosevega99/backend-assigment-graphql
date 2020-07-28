@@ -24,8 +24,11 @@ export class ProblemsService {
     if (freeAgent) {
       await this.agentToProblem(problem._id, freeAgent.id)
     }
-
     return problem
+  }
+
+  async agentToProblem(problemID: string, agentAvailable: object): Promise<Problem> {
+    return await this.problemModel.findOneAndUpdate({ _id: problemID }, { $set: { agentId: agentAvailable } })
   }
 
 }
