@@ -54,4 +54,8 @@ export class ProblemsService {
     }
   }
 
+  async availabilityAgent(agentId: object): Promise<Agent> {
+    return await this.agentModel.findOneAndUpdate({ _id: agentId }, { $set: { availability: false } })
+  }
+
 }
