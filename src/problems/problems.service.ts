@@ -31,4 +31,9 @@ export class ProblemsService {
     return await this.problemModel.findOneAndUpdate({ _id: problemID }, { $set: { agentId: agentAvailable } })
   }
 
+  async listProblems(): Promise<Problem[]> {
+    const problems = await this.problemModel.find()
+    return problems
+  }
+
 }
