@@ -12,7 +12,7 @@ export class AgentsService {
 
   async createAgent(createAgentDTO: CreateAgentDTO) : Promise<Agent> {
     const agent = new this.agentModel(createAgentDTO)
-    return agent
+    return await agent.save()
   }
 
 }
