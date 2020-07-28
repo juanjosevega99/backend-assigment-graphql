@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Res, HttpStatus } from '@nestjs/common';
+import { Controller, Post, Body, Res, HttpStatus, NotFoundException } from '@nestjs/common';
 
 import { CreateProblemDTO } from './dto/create-problem.dto'
 import { ProblemsService } from './problems.service'
@@ -11,7 +11,8 @@ export class ProblemsController {
   @Post('/create')
   async createProblem(@Res() res, @Body() createProblemDTO: CreateProblemDTO) {
     const problem = await this.problemsService.createProblem(createProblemDTO)
-    return res.status(HttpStatus.CREATED).json({
+    if (!problem) throw new NotFoundException('Problem cannot be created')
+    return res.status(HttpStatus.CREATED).jsn({
       message: 'Problem Successfully Created',
       problem
     })
