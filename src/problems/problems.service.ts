@@ -17,7 +17,7 @@ export class ProblemsService {
 
   async createProblem(createProblemDTO: CreateProblemDTO): Promise<Problem> {
     const problem = new this.problemModel(createProblemDTO)
-    await problem.save
+    await problem.save()
 
     // assign agent to Problem
     const freeAgent = await this.agentModel.findOneAndUpdate({ availability: true }, { $set: { availability: false } })

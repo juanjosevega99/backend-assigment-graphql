@@ -12,7 +12,7 @@ export class ProblemsController {
   async createProblem(@Res() res, @Body() createProblemDTO: CreateProblemDTO) {
     const problem = await this.problemsService.createProblem(createProblemDTO)
     if (!problem) throw new NotFoundException('Problem cannot be created')
-    return res.status(HttpStatus.CREATED).jsn({
+    return res.status(HttpStatus.CREATED).json({
       message: 'Problem Successfully Created',
       problem
     })
