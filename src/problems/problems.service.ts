@@ -36,4 +36,9 @@ export class ProblemsService {
     return problems
   }
 
+  async solveProblem(problemID: string): Promise<Problem> {
+    const problemSolved = await this.problemModel.findOneAndUpdate({ _id: problemID }, { $set: { solved: true } })
+    return problemSolved
+  }
+
 }
