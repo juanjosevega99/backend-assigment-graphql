@@ -1,5 +1,5 @@
 # Solved Backend Coding Challenge
-Code Challenge para candidatos Backend para DocRed.
+Code challenge for DocRed's backend candidates.
 
 # Instructions
 Follow this steps:
@@ -25,16 +25,12 @@ $ npm run start:dev
 # unit tests
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
 # test coverage
 $ npm run test:cov
 ```
 
 ## DataBase
-The better option to this challenge can be a SQL-DB, but right now MongoDB with ORM Mongoose is more structure and practice for me.
-
+A relational DB like MySQL might be a better approach to solve this  challenge, however, I felt the same could be  achieved using MongoDB with Mongoose ORM, besides, I feel more comfortable working with these technologies.
 
 ## Collection in Postman
 - Select docred_development like environment
