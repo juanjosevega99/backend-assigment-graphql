@@ -33,7 +33,7 @@ $ npm run test:cov
 ```
 
 ## DataBase
-The better option to this challenge can be a SQL-DB, but right now MongoDB with ORM Mongoose is more structure and practice.
+The better option to this challenge can be a SQL-DB, but right now MongoDB with ORM Mongoose is more structure and practice for me.
 
 
 ## Collection in Postman
@@ -44,6 +44,6 @@ The better option to this challenge can be a SQL-DB, but right now MongoDB with 
 
 ## Stay in touch
 
-- You can be free to do pull request
+- Feel free to do a pull request
 - Website - [juanjosevega99.github.io](https://juanjosevega99.github.io/)
 - Twitter - [@juanjosevega99](https://twitter.com/juanjosevega99)
