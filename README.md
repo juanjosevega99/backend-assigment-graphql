@@ -1,6 +1,9 @@
 # Solved Backend Coding Challenge
 Code Challenge para candidatos Backend para DocRed.
 
+# Instructions
+Follow this steps:
+
 ## Installation
 
 ```bash
@@ -10,6 +13,8 @@ $ npm install
 ## Running the app
 
 ```bash
+# development
+$ npm run start
 # watch mode
 $ npm run start:dev
 ```
@@ -27,14 +32,18 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Stay in touch
+## DataBase
+The better option to this challenge can be a SQL-DB, but right now MongoDB with ORM Mongoose is more structure and practice.
 
-- You can be free to do pull request
-- Website - [juanjosevega99.github.io](https://juanjosevega99.github.io/)
-- Twitter - [@juanjosevega99](https://twitter.com/juanjosevega99)
 
 ## Collection in Postman
 - Select docred_development like environment
 - Every request have a description with the info to work
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/d9805eb10e671ef0ea69#?env%5Bdocred_development%5D=W3sia2V5IjoidXJsIiwidmFsdWUiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJlbmFibGVkIjp0cnVlfV0=)
+
+## Stay in touch
+
+- You can be free to do pull request
+- Website - [juanjosevega99.github.io](https://juanjosevega99.github.io/)
+- Twitter - [@juanjosevega99](https://twitter.com/juanjosevega99)
