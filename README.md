@@ -30,7 +30,8 @@ $ npm run test:cov
 ```
 
 ## DataBase
-A relational DB like MySQL might be a better approach to solve this  challenge, however, I felt the same could be  achieved using MongoDB with Mongoose ORM, besides, I feel more comfortable working with these technologies.
+A relational DB like MySQL might be a better approach to solve this  challenge, however, I felt the same could be  achieved using MongoDB with Mongoose ORM, besides, I feel more comfortable working with these technologies.  
+(You can see the data saved in mongoDB Atlas and verify that all the requirements were solved)
 
 ## Collection in Postman
 - Click the button and follow instructions to save in your postman
