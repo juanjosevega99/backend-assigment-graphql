@@ -33,6 +33,7 @@ $ npm run test:cov
 A relational DB like MySQL might be a better approach to solve this  challenge, however, I felt the same could be  achieved using MongoDB with Mongoose ORM, besides, I feel more comfortable working with these technologies.
 
 ## Collection in Postman
+- Click the button to save in your postman
 - Select docred_development like environment
 - Every request have a description with the info to work
 
