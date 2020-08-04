@@ -6,6 +6,9 @@ import { UsersModule } from './users/users.module';
 import { ProblemsModule } from './problems/problems.module';
 import { MongooseModule } from '@nestjs/mongoose'
 
+import { GraphQLModule } from '@nestjs/graphql'
+import { join } from 'path';
+
 @Module({
   imports: [
     AgentsModule, 
@@ -15,6 +18,9 @@ import { MongooseModule } from '@nestjs/mongoose'
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false
+    }),
+    GraphQLModule.forRoot({
+      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
     })
   ],
   controllers: [AppController],
