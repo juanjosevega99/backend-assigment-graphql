@@ -14,7 +14,7 @@ export class ProblemsResolver {
   
   @Mutation('createProblem')
   createProblem(@Args('args') data: ProblemDto) {
-    // return this.problemsService.createProblem(data)
+    return this.problemsService.createProblem(data)
   }
 
 }
