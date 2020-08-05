@@ -6,6 +6,7 @@ import { ProblemsService } from './problems.service';
 
 import { AgentSchema } from 'src/agents/schemas/agent.schema';
 import { AgentsModule } from 'src/agents/agents.module';
+import { ProblemsResolver } from './problems.resolver';
 
 @Module({
   imports: [
@@ -16,6 +17,6 @@ import { AgentsModule } from 'src/agents/agents.module';
     ])
   ],
   controllers: [ProblemsController],
-  providers: [ProblemsService]
+  providers: [ProblemsService, ProblemsResolver]
 })
 export class ProblemsModule {}

@@ -1,0 +1,17 @@
+type Query {
+  problems: [Problem]
+}
+
+type Mutation {
+  createProblem(args: ProblemDto): Problem
+}
+
+input ProblemDto {
+  description: String!
+  solved: Boolean
+}
+
+type Problem {
+  description: String,
+  solved: Boolean
+}
