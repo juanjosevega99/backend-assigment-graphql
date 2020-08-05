@@ -1,4 +1,4 @@
-# Solved Backend Coding Challenge
+# Solved Backend Coding Challenge (Graphql)
 Code challenge for DocRed's backend candidates.
 
 # Instructions
