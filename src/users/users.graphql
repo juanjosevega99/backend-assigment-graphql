@@ -1,0 +1,15 @@
+type Query {
+  users: [User]
+}
+
+type Mutation {
+  createUser(args: userDto): User
+}
+
+input userDto {
+  name: String!
+}
+
+type User {
+  name: String!
+}
