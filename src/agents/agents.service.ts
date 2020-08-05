@@ -15,4 +15,9 @@ export class AgentsService {
     return await agent.save()
   }
 
+  async getAgents(): Promise<Agent[]> {
+    const agents = await this.agentModel.find()
+    return agents
+  }
+
 }

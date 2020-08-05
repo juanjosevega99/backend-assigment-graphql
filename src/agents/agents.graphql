@@ -1,0 +1,15 @@
+type Query {
+  agents: [Agent]
+}
+
+type Mutation {
+  createAgent(args: agentDto): Agent
+}
+
+input agentDto {
+  name: String!
+}
+
+type Agent {
+  name: String!
+}
