@@ -43,5 +43,6 @@ export interface Problem {
 }
 
 export interface User {
+    id?: string;
     name: string;
 }

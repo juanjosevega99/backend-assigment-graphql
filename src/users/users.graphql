@@ -11,5 +11,6 @@ input UserDto {
 }
 
 type User {
+  id: ID
   name: String!
 }
