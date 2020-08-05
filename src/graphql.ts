@@ -32,6 +32,7 @@ export interface IMutation {
 }
 
 export interface Agent {
+    id?: string;
     name: string;
 }
 
