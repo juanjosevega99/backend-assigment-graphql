@@ -8,9 +8,11 @@ type Mutation {
 
 input AgentDto {
   name: String!
+  availability: Boolean!
 }
 
 type Agent {
   id: ID
   name: String!
+  availability: Boolean
 }

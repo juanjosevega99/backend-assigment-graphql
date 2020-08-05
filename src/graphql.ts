@@ -8,6 +8,7 @@
 /* eslint-disable */
 export interface AgentDto {
     name: string;
+    availability: boolean;
 }
 
 export interface ProblemDto {
@@ -37,6 +38,7 @@ export interface IMutation {
 export interface Agent {
     id?: string;
     name: string;
+    availability?: boolean;
 }
 
 export interface Problem {
