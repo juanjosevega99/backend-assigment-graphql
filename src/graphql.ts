@@ -38,6 +38,8 @@ export interface Agent {
 export interface Problem {
     description?: string;
     solved?: boolean;
+    userId?: User;
+    agentId?: Agent;
 }
 
 export interface User {
