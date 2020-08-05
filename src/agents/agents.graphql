@@ -3,10 +3,10 @@ type Query {
 }
 
 type Mutation {
-  createAgent(args: agentDto): Agent
+  createAgent(args: AgentDto): Agent
 }
 
-input agentDto {
+input AgentDto {
   name: String!
 }
 

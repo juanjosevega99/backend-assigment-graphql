@@ -3,10 +3,10 @@ type Query {
 }
 
 type Mutation {
-  createUser(args: userDto): User
+  createUser(args: UserDto): User
 }
 
-input userDto {
+input UserDto {
   name: String!
 }
 

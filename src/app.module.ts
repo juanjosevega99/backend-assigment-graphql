@@ -7,6 +7,7 @@ import { ProblemsModule } from './problems/problems.module';
 import { MongooseModule } from '@nestjs/mongoose'
 
 import { GraphQLModule } from '@nestjs/graphql'
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -22,6 +23,10 @@ import { GraphQLModule } from '@nestjs/graphql'
       debug: true,
       playground: true,
       typePaths: ['./**/*.graphql'],
+      definitions: {
+        path: join(process.cwd(), 'src/graphql.ts'),
+        outputAs: 'interface',
+      },
     })
   ],
   controllers: [AppController],

@@ -1,5 +1,6 @@
-import { Resolver, Query, Mutation } from '@nestjs/graphql';
+import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
 import { UsersService } from './users.service'
+import { UserDto } from './../graphql'
 
 @Resolver('Users')
 export class UsersResolver {
@@ -11,9 +12,9 @@ export class UsersResolver {
     return this.usersService.getUsers()
   }
 
-  // @Mutation('createUser')
-  // createUser() {
-  //   return this.usersService.createUser()
-  // }
+  @Mutation('createUser')
+  createUser(@Args('args') data: UserDto) {
+    return this.usersService.createUser(data)
+  }
 
 }
