@@ -13,6 +13,9 @@ export interface AgentDto {
 export interface ProblemDto {
     description: string;
     solved?: boolean;
+    userId?: string;
+    agentId?: string;
+    createdAt?: string;
 }
 
 export interface UserDto {
@@ -39,8 +42,8 @@ export interface Agent {
 export interface Problem {
     description?: string;
     solved?: boolean;
-    userId?: User;
-    agentId?: Agent;
+    userId?: string;
+    agentId?: string;
 }
 
 export interface User {

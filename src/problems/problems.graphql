@@ -9,11 +9,14 @@ type Mutation {
 input ProblemDto {
   description: String!
   solved: Boolean
+  userId: ID
+  agentId: ID
+  createdAt: String
 }
 
 type Problem {
   description: String,
   solved: Boolean
-  userId: User,
-  agentId: Agent,
+  userId: ID,
+  agentId: ID,
 }

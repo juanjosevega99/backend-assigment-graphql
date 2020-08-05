@@ -12,9 +12,9 @@ export class ProblemsResolver {
     return this.problemsService.listProblems()
   }
   
-  // @Mutation('createProblem')
-  // createProblem(@Args('args') data: ProblemDto) {
-  //   return this.problemsService.createProblem(data)
-  // }
+  @Mutation('createProblem')
+  createProblem(@Args('args') data: ProblemDto) {
+    return this.problemsService.createProblem(data)
+  }
 
 }
