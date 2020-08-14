@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 
-import { CreateAgentDTO } from './dto/create-agent.dto'
-import { Agent } from './interfaces/agent.interface'
+import { CreateAgentDTO } from '../dto/create-agent.dto'
+import { Agent } from '../interfaces/agent.interface'
 
 @Injectable()
 export class AgentsService {
