@@ -1,7 +1,7 @@
 import { Controller, Post, Body, Res, HttpStatus, NotFoundException } from '@nestjs/common';
 
 import { CreateUserDTO } from './dto/create-user.dto'
-import { UsersService } from './users.service'
+import { UsersService } from './services/users.service'
 
 @Controller('users')
 export class UsersController {
