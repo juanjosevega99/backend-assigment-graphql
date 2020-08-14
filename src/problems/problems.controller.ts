@@ -2,6 +2,7 @@ import { Controller, Post, Body, Res, HttpStatus, NotFoundException, Get, Param 
 
 import { CreateProblemDTO } from './dto/create-problem.dto'
 import { ProblemsService } from './problems.service'
+import { ProblemDto } from '../graphql'
 
 @Controller('problems')
 export class ProblemsController {
@@ -9,8 +10,8 @@ export class ProblemsController {
   constructor(private problemsService: ProblemsService) {}
 
   @Post('/create')
-  async createProblem(@Res() res, @Body() createProblemDTO: CreateProblemDTO) {
-    const problem = await this.problemsService.createProblem(createProblemDTO)
+  async createProblem(@Res() res, @Body() problemDto: ProblemDto) {
+    const problem = await this.problemsService.createProblem(problemDto)
     if (!problem) throw new NotFoundException('Problem cannot be created')
     return res.status(HttpStatus.CREATED).json({
       message: 'Problem Successfully Created',

@@ -6,6 +6,7 @@ import { Problem } from './interfaces/problem.interface';
 import { CreateProblemDTO } from './dto/create-problem.dto'
 
 import { Agent } from 'src/agents/interfaces/agent.interface';
+import { ProblemDto } from '../graphql'
 
 @Injectable()
 export class ProblemsService {
@@ -15,8 +16,8 @@ export class ProblemsService {
     @InjectModel('Agent') private agentModel: Model<Agent>,
   ) {}
 
-  async createProblem(createProblemDTO: CreateProblemDTO): Promise<Problem> {
-    const problem = new this.problemModel(createProblemDTO)
+  async createProblem(problemDto: ProblemDto): Promise<Problem> {
+    const problem = new this.problemModel(problemDto)
     await problem.save()
 
     // assign agent to Problem

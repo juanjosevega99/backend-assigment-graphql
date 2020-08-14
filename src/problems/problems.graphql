@@ -15,8 +15,8 @@ input ProblemDto {
 }
 
 type Problem {
-  description: String,
+  description: String
   solved: Boolean
-  userId: ID,
-  agentId: ID,
+  userId: ID
+  agentId: ID
 }
