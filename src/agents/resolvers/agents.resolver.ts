@@ -1,6 +1,6 @@
 import { Resolver, Query, Args, Mutation } from '@nestjs/graphql';
-import { AgentsService } from './agents.service'
-import { AgentDto } from './../graphql'
+import { AgentsService } from '../agents.service'
+import { AgentDto } from '../../graphql'
 
 @Resolver('Agents')
 export class AgentsResolver {
