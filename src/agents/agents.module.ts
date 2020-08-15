@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AgentSchema } from './schemas/agent.schema';
 import { AgentsController } from './agents.controller';
-import { AgentsService } from './agents.service';
-import { AgentsResolver } from './agents.resolver';
+import { AgentsService } from './services/agents.service';
+import { AgentsResolver } from './resolvers/agents.resolver';
 
 @Module({
   imports: [
