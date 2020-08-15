@@ -6,7 +6,7 @@ import { ProblemsService } from './problems.service';
 
 import { AgentSchema } from 'src/agents/schemas/agent.schema';
 import { AgentsModule } from 'src/agents/agents.module';
-import { ProblemsResolver } from './problems.resolver';
+import { ProblemsResolver } from './resolvers/problems.resolver';
 
 @Module({
   imports: [
