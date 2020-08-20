@@ -25,6 +25,6 @@ export class ConfigService {
   }
 
   get(key: string): string {
-    return this.envConfig;
+    return this.envConfig[key];
   }
 }
